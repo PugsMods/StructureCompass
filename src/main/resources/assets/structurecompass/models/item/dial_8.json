@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {"layer0": "structurecompass:item/compass_base",
+    "layer1": "structurecompass:item/dial_8"
+  }
+}
