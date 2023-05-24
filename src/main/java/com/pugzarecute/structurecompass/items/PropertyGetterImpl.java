@@ -13,11 +13,14 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
+@OnlyIn(Dist.CLIENT)
 public class PropertyGetterImpl implements IItemPropertyGetter {
     private final ItemModelsProperties.Angle wobble = new ItemModelsProperties.Angle();
     private final ItemModelsProperties.Angle wobbleRandom = new ItemModelsProperties.Angle();

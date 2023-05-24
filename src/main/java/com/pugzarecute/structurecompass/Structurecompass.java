@@ -1,19 +1,13 @@
 package com.pugzarecute.structurecompass;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import com.pugzarecute.structurecompass.items.CompassItem;
-import net.minecraft.item.crafting.RecipeManager;
 import net.minecraft.resources.ResourcePackType;
-import net.minecraft.util.JSONUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import com.pugzarecute.structurecompass.items.Registry;
@@ -22,14 +16,7 @@ import pers.solid.brrp.v1.api.LanguageProvider;
 import pers.solid.brrp.v1.api.RuntimeResourcePack;
 import pers.solid.brrp.v1.forge.RRPEvent;
 
-import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
 
 @Mod("structurecompass")
 @Mod.EventBusSubscriber(modid = Structurecompass.MODID)
@@ -42,8 +29,6 @@ public class Structurecompass {
     public static final String MODID = "structurecompass";
     public Structurecompass() {
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
-        FMLJavaModLoadingContext.get().getModEventBus().register(ModEventBusSubscriber.class);
-
 
         Registry.regItems();
         Registry.ITEM.register(FMLJavaModLoadingContext.get().getModEventBus());
